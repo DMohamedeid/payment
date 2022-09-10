@@ -1,0 +1,35 @@
+we gonna use the library srmklive/paypal version 1
+
+--> composer require srmklive/paypal "~1.0"
+
+in the app providers we add
+
+-> Srmklive\PayPal\Providers\PayPalServiceProvider::class,
+
+after we type the command
+
+php artisan vendor:publish --provider "Srmklive\PayPal\Providers\PayPalServiceProvider"
+
+then we create the PayPal Controller
+
+
+in .env file we add configuration to the paypal
+
+--> PAYPAL_MODE=sandbox
+--> PAYPAL_SANDBOX_API_USERNAME=*********
+--> PAYPAL_SANDBOX_API_PASSWORD=***********
+--> PAYPAL_SANDBOX_API_SECRET=*********
+--> PAYPAL_CURRENCY=USD
+--> PAYPAL_SANDBOX_API_CERTIFICATE=
+
+
+we create 2 accounts in paypal one for business and the other personal we add the details of business account
+--> PAYPAL_SANDBOX_API_USERNAME=
+--> PAYPAL_SANDBOX_API_PASSWORD=
+--> PAYPAL_SANDBOX_API_SECRET=
+
+
+
+
+
+
