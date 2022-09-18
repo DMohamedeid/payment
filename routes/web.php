@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PayPalController;
+use App\Http\Controllers\KashierController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,14 @@ Route::get('paypal/go-payment',[PayPalController::class,'goPayment'])->name('pay
 Route::get('paypal/payment',[PayPalController::class,'payment'])->name('payPal.payment');
 Route::get('paypal/cancel',[PayPalController::class,'cancel'])->name('payPal.cancel');
 Route::get('paypal/payment/success',[PayPalController::class,'success'])->name('payPal.success');
+
+// Kashier Payment
+
+Route::get('kashier',function (){
+    return view('Product.kashier_payment');
+});
+Route::get('/KashierOrderHash',[KashierController::class,'generateKashierOrderHash'])->name('kashierOrder');
+
+Route::get('/successKashier',[KashierController::class,'validateSignature'])->name('kashier.validateSignature');
+
+// End of Kashier
