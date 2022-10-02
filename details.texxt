@@ -14,14 +14,14 @@ then we create the PayPal Controller
 
 
 in .env file we add configuration to the paypal
-
---> PAYPAL_MODE=sandbox
---> PAYPAL_SANDBOX_API_USERNAME=*********
---> PAYPAL_SANDBOX_API_PASSWORD=***********
---> PAYPAL_SANDBOX_API_SECRET=*********
---> PAYPAL_CURRENCY=USD
---> PAYPAL_SANDBOX_API_CERTIFICATE=
-
+-->
+ PAYPAL_MODE=sandbox
+ PAYPAL_SANDBOX_API_USERNAME=*********
+ PAYPAL_SANDBOX_API_PASSWORD=***********
+ PAYPAL_SANDBOX_API_SECRET=*********
+ PAYPAL_CURRENCY=USD
+ PAYPAL_SANDBOX_API_CERTIFICATE=
+-->
 
 we create 2 accounts in paypal one for business and the other personal we add the details of business account
 --> PAYPAL_SANDBOX_API_USERNAME=
@@ -29,7 +29,14 @@ we create 2 accounts in paypal one for business and the other personal we add th
 --> PAYPAL_SANDBOX_API_SECRET=
 
 
+for paymob we add
+-->
 
+PAYMOB_API_KEY=
+PAYMOB_INTEGRATION_ID=
+PAYMOB_IFRAME_ID=
+PAYMOB_HMAC=
 
+-->
 
 

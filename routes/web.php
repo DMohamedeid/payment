@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PayPalController;
 use App\Http\Controllers\KashierController;
+use App\Http\Controllers\PaymobController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +36,14 @@ Route::get('/KashierOrderHash',[KashierController::class,'generateKashierOrderHa
 Route::get('/successKashier',[KashierController::class,'validateSignature'])->name('kashier.validateSignature');
 
 // End of Kashier
+
+//payment for paymob
+Route::get('/paymob' , function (){
+    return view('Product.paymob');
+});
+
+//Route::post('/credit',[PaymobController::class,'credit'])->name('credit');
+Route::get('/credit/{type?}',[PaymobController::class,'credit'])->name('credit');
+Route::get('/callBack',[PaymobController::class,'callBack'])->name('callBack');
+
+//payment for paymob
